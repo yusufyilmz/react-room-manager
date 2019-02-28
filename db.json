@@ -143,5 +143,86 @@
     ],
     "picture": "https://picsum.photos/200",
     "active": true
-  }]
+  },
+  {
+    "id": 5,
+    "bed_type": 2,
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "address": "Passatge de la Pau, Barcelona, España",
+    "city": "Barcelona",
+    "country": "España",
+    "available_from": "2018-11-08",
+    "published_at": "2018-10-06T15:33:46.000Z",
+    "min_days": 30,
+    "male_tenants": 7,
+    "female_tenants": 0,
+    "amenities_attributes": [
+      {
+        "amenity_type": 1
+      },
+      {
+        "amenity_type": 3
+      },
+      {
+        "amenity_type": 5
+      },
+      {
+        "amenity_type": 6
+      },
+      {
+        "amenity_type": 7
+      }
+    ],
+    "prices_attributes": [
+      {
+        "price_type": "monthly",
+        "price": 300,
+        "currency": "EUR",
+        "bills_included": true
+      }
+    ],
+    "picture": "https://picsum.photos/200",
+    "active": true
+  },
+  {
+    "id": 6,
+    "bed_type": 2,
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "address": "Passatge de la Pau, Barcelona, España",
+    "city": "Barcelona",
+    "country": "España",
+    "available_from": "2018-11-08",
+    "published_at": "2018-10-06T15:33:46.000Z",
+    "min_days": 30,
+    "male_tenants": 7,
+    "female_tenants": 0,
+    "amenities_attributes": [
+      {
+        "amenity_type": 1
+      },
+      {
+        "amenity_type": 3
+      },
+      {
+        "amenity_type": 5
+      },
+      {
+        "amenity_type": 6
+      },
+      {
+        "amenity_type": 7
+      }
+    ],
+    "prices_attributes": [
+      {
+        "price_type": "monthly",
+        "price": 300,
+        "currency": "EUR",
+        "bills_included": true
+      }
+    ],
+    "picture": "https://picsum.photos/200",
+    "active": true
+  }
+]
 }
