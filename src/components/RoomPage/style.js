@@ -9,6 +9,8 @@ export const RoomPageListWrapper = styled.ul`
     padding-inline-start: 10px;
 `;
 
+RoomPageListWrapper.displayName = 'RoomPageListWrapper';
+
 export const RoomPageButtonsWrapper = styled.div`
     display: flex;
     justify-content: space-between;

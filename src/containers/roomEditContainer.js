@@ -65,7 +65,9 @@ class RoomEditContainer extends Component {
       selectedRoom: this.state.selectedRoom,
       step: this.state.step,
       onChangeStep: this.onChangeStep,
-      percentage: (this.state.step - 1 ) * 33.3
+      percentage: (this.state.step - 1) * 33.3,
+      error: this.props.error,
+      errorMessage: this.props.errorMessage
     };
   }
 
@@ -78,7 +80,9 @@ class RoomEditContainer extends Component {
 
 const mapStateToProps = state => ({
   loading: state.loader.loading,
-  selectedRoom: state.room.selectedItem
+  selectedRoom: state.room.selectedItem,
+  error: state.error.error,
+  errorMessage: state.error.message
 });
 
 export default connect(mapStateToProps, { editRoom })(RoomEditContainer);

@@ -39,6 +39,7 @@ const filterRoomsSuccess = data => ({
 export const fetchRooms = () => async (dispatch) => {
   dispatch(loadingSuccess());
   const response = await roomAPI.fetchRooms();
+
   if (response.data && !response.data.error) {
     return dispatch(fetchRoomsSuccess(response));
   }

@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 const outputDirectory = 'dist';
 
@@ -38,6 +39,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       favicon: './public/favicon.ico'
+    }),
+    new webpack.DefinePlugin({
+      API_URL: JSON.stringify('http://localhost:3001')
     })
   ]
 };

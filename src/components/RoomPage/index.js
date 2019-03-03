@@ -2,6 +2,7 @@
 /* eslint-disable import/prefer-default-export */
 import React, { Fragment } from 'react';
 import RoomContainer from '../../containers/roomContainer';
+import ErrorHandler from '../Error';
 import { RoomCard } from '../RoomCard';
 import { RoomSort } from '../RoomSort';
 import { RoomFilter } from '../RoomFilter';
@@ -12,7 +13,7 @@ export const RoomPage = () => (
     {
       props => (
         !props.loading && !props.selectedRoom && (
-          <Fragment>
+          <ErrorHandler error={props.error} errorMessage={props.errorMessage}>
             <RoomPageButtonsWrapper>
               <RoomSort
                 sortRooms={props.sortRooms}
@@ -32,8 +33,7 @@ export const RoomPage = () => (
                 />
               ))}
             </RoomPageListWrapper>
-          </Fragment>
-
+          </ErrorHandler>
         )
       )
     }

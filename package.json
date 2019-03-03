@@ -4,7 +4,7 @@
   "main": "src/server/index.js",
   "scripts": {
     "start-api": "json-server --port 3001 --watch db.json",
-    "client": "webpack-dev-server --mode development --open --devtool inline-source-map --hot",
+    "client": " webpack-dev-server --mode development --open --devtool inline-source-map --hot",
     "dev": "concurrently \"npm run start-api\" \"npm run client\"",
     "build": "webpack --mode production",
     "test": "jest --verbose --forceExit --detectOpenHandles"
@@ -83,7 +83,7 @@
     "verbose": true,
     "clearMocks": true,
     "collectCoverage": true,
-    "setupTestFrameworkScriptFile": "<rootDir>/src/client/setupTests.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
     "transform": {
       "^.+\\.js$": "babel-jest"
     }

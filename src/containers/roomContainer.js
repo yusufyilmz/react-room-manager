@@ -53,7 +53,9 @@ class RoomContainer extends Component {
       selectedRoom: this.props.selectedRoom,
       filterText: this.state.text,
       filterHandleChange: this.filterHandleChange,
-      sortRooms: this.sortRooms
+      sortRooms: this.sortRooms,
+      error: this.props.error,
+      errorMessage: this.props.errorMessage
     };
   }
 
@@ -65,7 +67,9 @@ class RoomContainer extends Component {
 const mapStateToProps = state => ({
   rooms: state.room.items,
   loading: state.loader.loading,
-  selectedRoom: state.room.selectedItem
+  selectedRoom: state.room.selectedItem,
+  error: state.error.error,
+  errorMessage: state.error.message
 });
 
 export default connect(mapStateToProps, {
