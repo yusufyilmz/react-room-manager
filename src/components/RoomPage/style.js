@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const RoomListWrapper = styled.ul`
+export const RoomPageListWrapper = styled.ul`
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
@@ -9,4 +9,11 @@ export const RoomListWrapper = styled.ul`
     padding-inline-start: 10px;
 `;
 
-RoomListWrapper.displayName = 'RoomListWrapper';
+export const RoomPageButtonsWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+
+
+// RoomListWrapper.displayName = 'RoomListWrapper';

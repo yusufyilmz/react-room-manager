@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 import { RoomPage } from '../RoomPage';
 import { ContainerWrapper } from './style';
+import { Spinner } from '../Spinner';
+import { RoomEditPage } from '../RoomEditPage';
 
 const GlobalStyles = createGlobalStyle`
   body {
@@ -17,7 +18,9 @@ const GlobalStyles = createGlobalStyle`
 export const App = () => (
   <ContainerWrapper>
     <GlobalStyles />
+    <Spinner />
     <RoomPage />
+    <RoomEditPage />
   </ContainerWrapper>
 );
 

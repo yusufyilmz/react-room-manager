@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
+import { device } from '../../constants/mediaQueries';
 
 export const RoomCardItemWrapper = styled.li`
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    flex: 0 0 25%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -17,10 +17,19 @@ export const RoomCardItemWrapper = styled.li`
     justify-content: space-around;
     height: 300px;
     padding: 5px;
-    @media (max-width: 768px) {
-        flex: 0 0 40%;
+    flex-shrink: 1;
+    flex-gro: 1;
+    @media ${device.mobileS} {
+        flex: 0 1 40%;
         margin: 5px;
         height: 200px;
+    }
+    @media ${device.tablet} {
+        flex: 0 1 30%;
+    }
+    @media ${device.laptop} {
+        flex: 0 1 20%;
+        height: 300px;
     }
 `;
 

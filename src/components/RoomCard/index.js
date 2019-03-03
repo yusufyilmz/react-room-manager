@@ -9,8 +9,8 @@ import {
 // - Price
 // - Available from
 // - Active
-export const RoomCard = ({ item }) => (
-  <RoomCardItemWrapper>
+export const RoomCard = ({ item, onClick }) => (
+  <RoomCardItemWrapper onClick={() => onClick(item)}>
     <RoomCardImgWrapper
       alt={item.picture}
       src={item.picture}
@@ -25,7 +25,8 @@ export const RoomCard = ({ item }) => (
       </RoomCardHeaderWrapper>
       <RoomCardTextWrapper>
         Available from:
-        {' '}
+      </RoomCardTextWrapper>
+      <RoomCardTextWrapper>
         {item.available_from}
       </RoomCardTextWrapper>
       {/* <RoomCardTextWrapper>
