@@ -5,6 +5,7 @@ import RoomEditContainer from '../../containers/roomEditContainer';
 import { Button } from '../Elements/button';
 import { RoomLocation } from '../RoomLocation';
 import { RoomDatePrice } from '../RoomDatePrice';
+import { ProgressBar } from '../ProgressBar';
 import { RoomContent } from '../RoomContent';
 import {
   RoomEditContainerWrapper, RoomEditFormWrapper
@@ -55,16 +56,21 @@ export const RoomEditPage = () => (
                       />
                     )
                   }
+                  {props.step !== 1
+                  && (
                   <Button
                     text="Previous"
                     float="left"
                     onClick={() => props.onChangeStep(-1)}
                   />
+                  )
+                   }
                   <Button
                     text="Next"
                     float="right"
                     onClick={() => props.onChangeStep(1)}
                   />
+                  <ProgressBar percentage={props.percentage} />
                 </RoomEditFormWrapper>
               </RoomEditContainerWrapper>
             )

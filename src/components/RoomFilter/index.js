@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable import/prefer-default-export */
-import React, { Fragment } from 'react';
+import React from 'react';
 import { InputGroup } from '../Elements/inputGroup';
-import  {RoomFilterWrapper} from './style';
+import { RoomFilterWrapper } from './style';
 
 export const RoomFilter = ({ text, handleChange }) => (
   <RoomFilterWrapper>

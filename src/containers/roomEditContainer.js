@@ -5,12 +5,13 @@
 
 import { Component } from 'react';
 import { connect } from 'react-redux';
-import { editRoom, backToRoomPage } from '../actions';
+import { editRoom } from '../actions';
 
 class RoomEditContainer extends Component {
   state = {
     selectedRoom: null,
-    step: 1
+    step: 1,
+    percentage: 0
   }
 
   componentDidUpdate(prevProps) {
@@ -37,7 +38,8 @@ class RoomEditContainer extends Component {
 
   onChangeStep = (value) => {
     this.setState(prevState => ({
-      step: prevState.step + value
+      step: prevState.step + value,
+      percentage: (prevState.step + value) * 33.3
     }), () => {
       if (this.state.step > 3) {
         this.props.editRoom(this.state.selectedRoom);
@@ -66,7 +68,7 @@ class RoomEditContainer extends Component {
       selectedRoom: this.state.selectedRoom,
       step: this.state.step,
       onChangeStep: this.onChangeStep,
-
+      percentage: (this.state.step - 1 ) * 33.3
     };
   }
 
@@ -82,4 +84,4 @@ const mapStateToProps = state => ({
   selectedRoom: state.room.selectedItem
 });
 
-export default connect(mapStateToProps, { editRoom, backToRoomPage })(RoomEditContainer);
+export default connect(mapStateToProps, { editRoom })(RoomEditContainer);

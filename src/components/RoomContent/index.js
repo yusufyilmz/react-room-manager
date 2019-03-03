@@ -7,11 +7,13 @@ import { InputGroup } from '../Elements/inputGroup';
 import { RadioGroup } from '../Elements/RadioGroup';
 import { Beds, Amenities } from '../../constants/properties';
 import { CheckBox } from '../Elements/checkBox';
+import { Header } from '../Header';
 
 export const RoomContent = ({
   description, bed_type, min_days, amenities, handleChange, handleCheckChange
 }) => (
   <Fragment>
+    <Header title="Room Content" description=""/>
     <InputGroup
       title="Room description"
       type="text"

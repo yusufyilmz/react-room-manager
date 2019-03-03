@@ -7,9 +7,9 @@
       "address": "Passatge de la Pau, Barcelona, España232www",
       "city": "Madrid22",
       "country": "España",
-      "available_from": "2018-11-08",
+      "available_from": "2018-11-14",
       "published_at": "2018-10-06T15:33:46.000Z",
-      "min_days": 30,
+      "min_days": "38",
       "male_tenants": 7,
       "female_tenants": 0,
       "amenities_attributes": [
@@ -18,12 +18,27 @@
         },
         {
           "amenity_type": 7
+        },
+        {
+          "amenity_type": 1
+        },
+        {
+          "amenity_type": 2
+        },
+        {
+          "amenity_type": 6
+        },
+        {
+          "amenity_type": 5
+        },
+        {
+          "amenity_type": 3
         }
       ],
       "prices_attributes": [
         {
           "price_type": "monthly",
-          "price": 305,
+          "price": "301",
           "currency": "EUR",
           "bills_included": true
         }
@@ -55,6 +70,12 @@
         },
         {
           "amenity_type": 7
+        },
+        {
+          "amenity_type": 6
+        },
+        {
+          "amenity_type": 5
         }
       ],
       "prices_attributes": [
@@ -186,7 +207,7 @@
       "id": 6,
       "bed_type": 2,
       "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      "address": "Passatge de la Pau, Barcelona, España2222",
+      "address": "Passatge de la Pau, Barcelona, España22223434",
       "city": "Paris",
       "country": "France",
       "available_from": "2018-11-08",
@@ -214,7 +235,7 @@
       "prices_attributes": [
         {
           "price_type": "monthly",
-          "price": 10,
+          "price": "1023",
           "currency": "EUR",
           "bills_included": true
         }

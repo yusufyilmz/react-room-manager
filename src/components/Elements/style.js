@@ -24,10 +24,9 @@ const Button = styled.button`
 
 
 export const ButtonWrapper = styled(Button)`
-    margin-left: ${props => props.left}px;
-    margin-bottom: ${props => props.bottom}px;
-    width: ${props => props.width}px;
     float: ${props => props.float};
+    width: 35%;
+    max-width: 100px;
 `;
 
 export const InputButtonWrapper = styled(Button)`
@@ -92,6 +91,9 @@ export const RadioLabelWrapper = styled.label`
 
 
 export const RadioControlWrapper = styled.input`
+    padding: 10px!important;
+    margin: 10px!important;
+    box-sizing: border-box;
     height: calc(2.25rem + 2px);
     margin: 30px;
     line-height: 1.5;

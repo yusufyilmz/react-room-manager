@@ -4,11 +4,6 @@ import React, { Fragment } from 'react';
 import { RadioGroupWrapper, RadioLabelWrapper, RadioControlWrapper } from './style';
 import { Icon } from '../Icon';
 
-const Option = props => (
-  <RadioControlWrapper type="checkbox" {...props} />
-);
-
-
 export const CheckBox = ({
   title, values, group, onChange, options
 }) => (
@@ -19,9 +14,10 @@ export const CheckBox = ({
       <Fragment
         key={`check${option}`}
       >
-        <Option
+        <RadioControlWrapper
+          type="checkbox"
           key={option}
-          checked={values.find(x => x.amenity_type === option)}
+          checked={!!values.find(x => x.amenity_type === option)}
           onChange={e => onChange(option, e.target.checked)}
         />
         <Icon

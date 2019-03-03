@@ -13,7 +13,3 @@ export const RoomPageButtonsWrapper = styled.div`
     display: flex;
     justify-content: space-between;
 `;
-
-
-
-// RoomListWrapper.displayName = 'RoomListWrapper';

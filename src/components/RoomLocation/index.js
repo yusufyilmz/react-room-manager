@@ -1,20 +1,12 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable import/prefer-default-export */
 import React, { Fragment } from 'react';
-// import { Form, Container } from 'react-bootstrap';
 import { InputGroup } from '../Elements/inputGroup';
-// import { Button } from '../Elements/button';
+import { Header } from '../Header';
 
-// import { FormSelect } from '../Elements/formSelect';
-// import { LinkButton } from '../Elements/linkButton';
-// import {
-//   RoomEditLocationPageContainerWrapper
-// } from './style';
-// import { FormWrapper } from '../Elements/style';
-
-
-export const RoomLocation = ({ city, address, handleChange, onSubmit }) => (
+export const RoomLocation = ({ city, address, handleChange }) => (
   <Fragment>
+    <Header title="Room Location" description=""/>
     <InputGroup
       title="Room city"
       id="editRoomCityField"

@@ -10,7 +10,6 @@ import {
 
 let searchTimeout;
 
-
 class RoomContainer extends Component {
   state = {
     text: ''
@@ -62,7 +61,6 @@ class RoomContainer extends Component {
     return this.props.children(this.getStateAndHelpers());
   }
 }
-
 
 const mapStateToProps = state => ({
   rooms: state.room.items,

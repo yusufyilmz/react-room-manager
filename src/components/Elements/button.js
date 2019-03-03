@@ -1,15 +1,10 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
-import {ButtonWrapper} from './style';
-// import {Popup} from '../Popup';
+import { ButtonWrapper } from './style';
 
-export const Button = ({ text, onClick, float }) => {
-    return <ButtonWrapper float={float} onClick={onClick}  type="button">
-        {text}
-        {/* <Popup show={showPopup} message={message}/> */}
-    </ButtonWrapper>
-}
-
-
-
-
-
+export const Button = ({ text, onClick, float }) => (
+  <ButtonWrapper float={float} onClick={onClick} type="button">
+    {text}
+  </ButtonWrapper>
+);

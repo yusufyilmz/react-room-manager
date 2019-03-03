@@ -1,12 +1,7 @@
-
-
-
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
-import { Button} from 'react-bootstrap'
-
 
 export const RoomFilterWrapper = styled.div`
-        flex: 2 1 60%;
+      flex: 2 1 60%;
+      margin-right: 25px;
 `;
-
-// 

@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 export const RoomEditContainerWrapper = styled.div`
     width: 90%;
-    padding-top: 100px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -12,7 +11,7 @@ export const RoomEditContainerWrapper = styled.div`
     *, &::after, &::before {
         box-sizing: border-box;
     }
-`
+`;
 
 export const RoomEditFormWrapper = styled.form`
     width: 90%;
@@ -23,4 +22,4 @@ export const RoomEditFormWrapper = styled.form`
     *, &::after, &::before {
         box-sizing: border-box;
     }
-`
+`;
