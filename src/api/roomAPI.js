@@ -3,6 +3,20 @@ import axios from 'axios';
 
 
 class RoomAPI {
+  static async filterRooms(keyword) {
+    let response;
+    try {
+      const url = `${API_URL}/rooms?city_like=${keyword}`;
+      response = await axios.get(url);
+
+      return {
+        data: response.data,
+      };
+    } catch (e) {
+      return e;
+    }
+  }
+
   static async fetchRooms() {
     let response;
     try {

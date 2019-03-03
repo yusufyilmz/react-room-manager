@@ -8,7 +8,7 @@ export const RoomFilter = ({ text, handleChange }) => (
   <RoomFilterWrapper>
     <InputGroup
       type="text"
-      placeholder="Filter Issues with city, addres, country or description"
+      placeholder="Filter room cities..."
       text={text}
       value={text}
       onChange={e => handleChange(e.target.value)}

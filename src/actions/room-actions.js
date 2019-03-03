@@ -47,22 +47,29 @@ export const fetchRooms = () => async (dispatch) => {
   dispatch(fetchRoomsError(response.message));
 };
 
+// export const filterRooms = keyword => async (dispatch, getState) => {
+//   const { initialItems } = getState().room;
+//   const loweredKeyword = keyword.toLowerCase();
 
-export const filterRooms = keyword => async (dispatch, getState) => {
-  const { initialItems } = getState().room;
-  const loweredKeyword = keyword.toLowerCase();
+//   const filteredArray = [
+//     ...initialItems.filter(x => x.description.toLowerCase().indexOf(loweredKeyword) !== -1),
+//     ...initialItems.filter(x => x.city.toLowerCase().indexOf(loweredKeyword) !== -1),
+//     ...initialItems.filter(x => x.address.toLowerCase().indexOf(loweredKeyword) !== -1),
+//     ...initialItems.filter(x => x.country.toLowerCase().indexOf(loweredKeyword) !== -1),
+//   ];
 
+//   dispatch(filterRoomsSuccess(filteredArray.filter((item, pos) => filteredArray.indexOf(item) === pos)));
+// };
 
-  const filteredArray = [
-    ...initialItems.filter(x => x.description.toLowerCase().indexOf(loweredKeyword) !== -1),
-    ...initialItems.filter(x => x.city.toLowerCase().indexOf(loweredKeyword) !== -1),
-    ...initialItems.filter(x => x.address.toLowerCase().indexOf(loweredKeyword) !== -1),
-    ...initialItems.filter(x => x.country.toLowerCase().indexOf(loweredKeyword) !== -1),
-  ];
+export const filterRooms = keyword => async (dispatch) => {
 
-  dispatch(filterRoomsSuccess(filteredArray.filter((item, pos) => filteredArray.indexOf(item) === pos)));
+  dispatch(loadingSuccess());
+  const response = await roomAPI.filterRooms(keyword);
+  if (response.data && !response.data.error) {
+    return dispatch(filterRoomsSuccess(response.data));
+  }
+  dispatch(fetchRoomsError(response.message));
 };
-
 
 export const sortRooms = rooms => async (dispatch) => {
   dispatch(loadingSuccess());
@@ -81,7 +88,6 @@ export const editRoom = room => async (dispatch) => {
   dispatch(loadingSuccess());
   const response = await roomAPI.editRoom(room);
   if (response.data && !response.data.error) {
-    console.log(response);
     return dispatch(editRoomsSuccess(response.data));
   }
 
