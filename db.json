@@ -14,12 +14,6 @@
       "female_tenants": 0,
       "amenities_attributes": [
         {
-          "amenity_type": 4
-        },
-        {
-          "amenity_type": 7
-        },
-        {
           "amenity_type": 1
         },
         {
@@ -27,12 +21,6 @@
         },
         {
           "amenity_type": 6
-        },
-        {
-          "amenity_type": 5
-        },
-        {
-          "amenity_type": 3
         }
       ],
       "prices_attributes": [

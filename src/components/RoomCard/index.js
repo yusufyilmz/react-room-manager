@@ -4,11 +4,6 @@ import {
   RoomCardItemWrapper, RoomCardHeaderWrapper, RoomCardImgWrapper, RoomCardTextWrapper, RoomCardBodyWrapper
 } from './style';
 
-// Picture
-// - Country and city
-// - Price
-// - Available from
-// - Active
 export const RoomCard = ({ item, onClick }) => (
   <RoomCardItemWrapper onClick={() => onClick(item)}>
     <RoomCardImgWrapper
@@ -29,11 +24,6 @@ export const RoomCard = ({ item, onClick }) => (
       <RoomCardTextWrapper>
         {item.available_from}
       </RoomCardTextWrapper>
-      {/* <RoomCardTextWrapper>
-      Available from:
-        {' '}
-        {item.available_from}
-      </RoomCardTextWrapper> */}
     </RoomCardBodyWrapper>
   </RoomCardItemWrapper>
 );

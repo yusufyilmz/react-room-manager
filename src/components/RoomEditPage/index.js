@@ -12,9 +12,7 @@ import {
 } from './style';
 
 export const RoomEditPage = () => (
-  <RoomEditContainer
-    operation="edit"
-  >
+  <RoomEditContainer>
     {
       props => (
         <Fragment>

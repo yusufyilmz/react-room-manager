@@ -6,7 +6,7 @@ import { Header } from '../Header';
 
 export const RoomLocation = ({ city, address, handleChange }) => (
   <Fragment>
-    <Header title="Room Location" description=""/>
+    <Header title="Room Location" />
     <InputGroup
       title="Room city"
       id="editRoomCityField"

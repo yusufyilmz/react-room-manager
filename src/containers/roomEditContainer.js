@@ -10,8 +10,7 @@ import { editRoom } from '../actions';
 class RoomEditContainer extends Component {
   state = {
     selectedRoom: null,
-    step: 1,
-    percentage: 0
+    step: 1
   }
 
   componentDidUpdate(prevProps) {
@@ -30,7 +29,6 @@ class RoomEditContainer extends Component {
   }
 
   onRadioChange = (value) => {
-    console.log(this.state);
     this.setState(prevState => ({
       selectedRoom: { ...prevState.selectedRoom, prices_attributes: [{ ...prevState.selectedRoom.prices_attributes[0], price: value }] }
     }));
@@ -39,7 +37,6 @@ class RoomEditContainer extends Component {
   onChangeStep = (value) => {
     this.setState(prevState => ({
       step: prevState.step + value,
-      percentage: (prevState.step + value) * 33.3
     }), () => {
       if (this.state.step > 3) {
         this.props.editRoom(this.state.selectedRoom);
